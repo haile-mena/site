@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mena Hailemariam</title>
+    <style>
+        body {
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+            min-height: 1.2em;
+        }
+        .typing-cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1.2em;
+            background-color: #333;
+            animation: blink 0.7s infinite;
+            vertical-align: text-bottom;
+            margin-left: 2px;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1><span id="typing-text"></span><span class="typing-cursor"></span></h1>
+    <p>
+        i'm an aspiring software engineer, open to work! <br> <br>
+        i'm from ethiopia, currently based in washington, d.c, usa. <br> <br>
+        i love working with java, python, html/css, and always enjoy learning new technologies. check out what i've been working on <a href="https://github.com/haile-mena">here</a>!
+        <br> <br>
+        i graduated from george washington university with a degree in computer science at the school of engineering and applied science. 
+        <br> <br>
+        i have been a seo tech <a href="https://tech.seo-usa.org/">developer</a>, code2040 <a href="https://www.code2040.org/programs">fellow</a>, 
+        and recently received the gwu engineering's gary and judy bard entrepreneurial engineering award for my <a href="https://gw-cs-sd-25-26.github.io/senior-design-teamname/">capstone project</a>.
+        <br> <br>
+        when i'm not coding, you can find me reading, at the movies, or exploring new coffee shops in dc.
+    </p>
+
+    <script>
+        const text = "hello, i'm mena";
+        const typingElement = document.getElementById('typing-text');
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                typingElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, 100);
+            }
+        }
+
+        window.onload = type;
+    </script>
+
+</body>
+</html>
